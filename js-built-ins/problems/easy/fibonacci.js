@@ -40,11 +40,44 @@
 // Iterative Fibonacci function
 function fibonacci(n) {
   // Your code here
+  if(n==0){
+    return [];
+  }
+  if(n==1){
+    return [0];
+  }
+  if(n==2){
+    return [0,1];
+  }
+  let num1=0;
+  let num2=1;
+  let ans=[];
+  for(let i=0;i<n;i++){
+    if(i==0){
+      ans.push(num1);
+    }
+    else if(i==1){
+      ans.push(1);
+    }
+    else{
+      ans.push(num1+num2);
+      let temp=num2;
+      num2=num1+num2;
+      num1=temp;
+    }
+  }
+  return ans;
 }
 
 // Recursive Fibonacci function
 function fibonacciRecursive(n) {
   // Your code here
+  if(n==0||n==1){
+    return n;
+  }
+  
+  let ans=fibonacciRecursive(n-1)+fibonacciRecursive(n-2);
+  return ans;
 }
 
 module.exports = { fibonacci, fibonacciRecursive };

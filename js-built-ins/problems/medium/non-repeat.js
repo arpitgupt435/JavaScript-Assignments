@@ -22,5 +22,15 @@
 */
 function nonrepeat(str) {
   // Your code here
+ 
+  for(let i=0;i<str.length;i++){
+    let ch=str[i];
+    let ind1=str.lastIndexOf(ch);
+    let ind2=str.indexOf(ch);
+    if(ind1==ind2){
+      return ch;
+    }
+  }
+  return null;
 }
 module.exports = nonrepeat;

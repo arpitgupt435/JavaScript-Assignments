@@ -24,7 +24,21 @@
 
 function compressWords(arr) {
   // Your code here
+
+  let ans=[];
+  let i=0;
+  while(i<arr.length){
+    let str=arr[i];
+    let count=0;
+    while(i<arr.length&&arr[i]==str){
+      i++;
+      count++;
+    }
+    if(count>1){
+      str+=count;
+    }
+    ans.push(str);
+  }
+  return ans;
 }
-
-
 module.exports = compressWords;

@@ -23,6 +23,15 @@
 
 function reverseInteger(num) {
   // Your code here
+  let sign=1;
+  if(num<0){
+    sign=-1;
+  }
+  num=num*sign;
+  let str=String(num);
+  let revstr=str.split("").reverse().join("");
+  let newnum=Number(revstr);
+  return newnum*sign;
 }
 
 module.exports = reverseInteger;

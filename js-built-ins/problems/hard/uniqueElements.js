@@ -20,6 +20,15 @@
 
 function getUniqueElements(arr) {
   // Your code here
+  const myMap = new Map();
+  let ans=[];
+  for(let i=0;i<arr.length;i++){
+    if(myMap.has(arr[i])==false){
+      myMap.set(arr[i]);
+      ans.push(arr[i]);
+    }
+  }
+  return ans;
 }
 
 module.exports = getUniqueElements;
