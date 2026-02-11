@@ -6,3 +6,15 @@
 //  - HH:MM::SS (Eg. 13:45:23)
 
 //  - HH:MM::SS AM/PM (Eg 01:45:23 PM)
+
+
+
+let helper=()=>{
+    let time=new Date();
+    let hour=time.getHours();
+    let min=time.getMinutes();
+    let sec=time.getSeconds();
+    console.log(hour+':'+min+'::'+sec);
+}
+
+setInterval(helper,2000)
