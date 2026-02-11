@@ -5,3 +5,14 @@
 // Try to do an expensive operation below the file read and see how it affects the output. 
 // Make the expensive operation more and more expensive and see how it affects the output. 
 
+let helper=(err,contents)=>{
+    console.log(contents);
+}
+
+const fs=require('fs');
+
+fs.readFile('sample.txt','utf-8',helper);
+
+for(let i=0;i<1000000;i++){
+    console.log(i);
+}
